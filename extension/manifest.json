@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "JSON Panel for Shopify Admin",
+  "short_name": "JSON Panel",
+  "version": "0.2.0",
+  "description": "Shows the .json view of the current Shopify admin page in a side panel. Not affiliated with or endorsed by Shopify.",
+  "permissions": [
+    "sidePanel",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://admin.shopify.com/*",
+    "https://*.myshopify.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open JSON Panel",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+J",
+        "mac": "Alt+Shift+J"
+      },
+      "description": "Open the JSON panel"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

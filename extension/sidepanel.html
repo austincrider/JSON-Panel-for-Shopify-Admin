@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Panel</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="url-row">
+      <span id="pin-badge" class="badge" hidden>Pinned</span>
+      <a id="json-url" class="json-url" href="#" title="Open raw JSON in a new tab">No page loaded</a>
+    </div>
+    <div class="tools">
+      <button id="btn-refresh" title="Refetch the JSON">Refresh</button>
+      <button id="btn-pin" title="Stop following navigation and keep this JSON">Pin</button>
+      <button id="btn-expand" title="Expand all">Expand</button>
+      <button id="btn-collapse" title="Collapse all">Collapse</button>
+      <button id="btn-copy" title="Copy the full JSON">Copy JSON</button>
+    </div>
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Filter keys or values" autocomplete="off" spellcheck="false">
+      <span id="match-count" class="match-count"></span>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="message">
+      <strong>JSON Panel for Shopify Admin</strong>
+      <p>Open a Shopify admin product, order, or settings page.</p>
+    </div>
+  </main>
+
+  <footer id="status" class="status"></footer>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="url.js"></script>
+  <script src="jsontree.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
